@@ -55,8 +55,8 @@ how to do this. However, you may continue to use the + operator for string conca
 export function sumAndMultiplyThreeNumbers(a, b, c) { //eslint-disable-line
     const theSum = a + b + c;
     const theProduct = a * b * c;
-    const sumString = `${a} and ${b} and ${c} sum to ${theSum}.`
-    const productString = `The product of ${a} and ${b} and ${c} is ${theProduct}.`
+    const sumString = `${a} and ${b} and ${c} sum to ${theSum}.`;
+    const productString = `The product of ${a} and ${b} and ${c} is ${theProduct}.`;
     return [theSum, theProduct, sumString, productString];
 }
 
@@ -80,7 +80,6 @@ to use the + operator for string concatenation.
 
 export function sumArrayWithThreeNumbers(sumArr) {
     const theSum = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
-    //return [theSum, `${sumArr[0]},${sumArr[1]},${sumArr[2]} was passed in as an array of numbers, and ${theSum} is their sum.`];
     return [theSum, `The numbers ${sumArr[0]},${sumArr[1]},${sumArr[2]} have a sum of ${theSum}.`];
 }
 
@@ -126,7 +125,8 @@ This function should be dynamic, accepting an array of any length.
 */
 
 export function multiplyAnyArray(dynamicArray) { //eslint-disable-line
-
+    const theProduct = dynamicArray.reduce((prod, n) => prod * n);
+    return [theProduct, `The numbers ${dynamicArray.join()} have a product of ${theProduct}.`];
 }
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
